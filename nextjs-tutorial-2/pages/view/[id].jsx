@@ -5,7 +5,7 @@ import Item from "../../src/component/Item";
 import Head from "next/head";
 import { Loader } from "semantic-ui-react";
 
-const Post = ({ item }) => {
+const Post = ({ item, name }) => {
   const [isLoading, setLoading] = useState(true);
 
   return (
@@ -16,6 +16,7 @@ const Post = ({ item }) => {
             <title>HOME | 코딩앙마</title>
             <meta name="description" content="코딩 앙마 홈임"></meta>
           </Head>
+          {name} 환경 입니다
           <Item item={item} />
         </>
       )}
@@ -25,6 +26,7 @@ const Post = ({ item }) => {
 
 export default Post;
 
+//node 환경
 export async function getServerSideProps(context) {
   const id = context.params.id;
   const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
@@ -33,6 +35,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       item: data,
+      name: process.env.name,
     },
   };
 }
