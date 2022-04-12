@@ -5,6 +5,7 @@
   "/_error": "pages/_error.js",
   "/about": "pages/about.html",
   "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.html",
-  "/view/[id]": "pages/view/[id].js"
+  "/detail/[id]": "pages/detail/[id].js",
+  "/view/[id]": "pages/view/[id].js",
+  "/": "pages/index.js"
 }
