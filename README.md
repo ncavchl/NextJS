@@ -8,3 +8,9 @@ https://github.com/coding-angma/nextjs-tutorial/tree/lesson/2
 - Semantic ui
 - 
 
+
+
+
+`npm install`
+`npm run dev` - 개발모드
+`npm run build && npm run start` - 프로덕션모드
